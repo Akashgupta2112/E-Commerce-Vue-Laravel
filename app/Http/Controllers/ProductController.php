@@ -57,6 +57,7 @@ class ProductController extends Controller
 
             ->paginate(5);
 
+
         return view('product.index', [
             'products' => $products
         ]);

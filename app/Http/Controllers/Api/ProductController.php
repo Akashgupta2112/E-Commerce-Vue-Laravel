@@ -145,7 +145,7 @@ class ProductController extends Controller
                 Storage::makeDirectory($path, 0755, true);
             }
             $name = Str::random().'.'.$image->getClientOriginalExtension();
-            if (!Storage::putFileAS('public/' . $path, $image, $name)) {
+            if (!Storage::putFileAS('app/public/' . $path, $image, $name)) {
                 throw new \Exception("Unable to save file \"{$image->getClientOriginalName()}\"");
             }
             $relativePath = $path . '/' . $name;

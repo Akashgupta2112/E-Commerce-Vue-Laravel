@@ -6,9 +6,9 @@ import store from "./store";
 import router from "./router/index.js";
 
 const axiosClient = axios.create({
-  baseURL: `${import.meta.env.VITE_API_BASE_URL}/api`
+  baseURL: "http://127.0.0.1:8000/api"
 })
-
+  
 axiosClient.interceptors.request.use(config => {
   config.headers.Authorization = `Bearer ${store.state.user.token}`
   return config;
