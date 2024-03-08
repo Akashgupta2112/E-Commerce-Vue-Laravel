@@ -7,14 +7,14 @@
     class="flex justify-between bg-slate-800 shadow-md text-white"
 >
     <div>
-        <a href="{{ route('home') }}" class="block py-navbar-item pl-5"> Logo </a>
+        <a href="{{ route('home') }}" class="block py-navbar-item pl-5" style="margin-left: 20px"> <img src="build/assets/logo4.png" alt="" width=160px> </a>
     </div>
     <!-- Responsive Menu -->
     <div
         class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
         :class="mobileMenuOpen ? 'left-0' : '-left-[220px]'"
     >
-        <ul>
+        <ul >
             <li>
                 <a
                     href="{{ route('cart.index') }}"
@@ -195,7 +195,7 @@
     </div>
     <!--/ Responsive Menu -->
     <nav class="hidden md:block">
-        <ul class="grid grid-flow-col items-center">
+        <ul class="grid grid-flow-col items-center" style="margin-top: 17px">
             <li>
                 <a
                     href="{{ route('cart.index') }}"

@@ -1,4 +1,5 @@
 <x-app-layout>
+    <img src="build/assets/logo2.png" alt="">
     <form method="POST" action="{{ route('login') }}" class="w-[400px] mx-auto p-6 my-16">
         <h2 class="text-2xl font-semibold text-center mb-5">
             Login to your account
