@@ -3,7 +3,7 @@ import CKEditor from '@ckeditor/ckeditor5-vue'
 import store from './store'
 import router from './router'
 import './index.css';
-import currencyUSD from './filters/currency.js'
+import currencyINR from './filters/currency.js'
 
 import App from './App.vue'
 
@@ -17,5 +17,5 @@ app
 ;
 
 app.config.globalProperties.$filters = {
-  currencyUSD
+  currencyINR
 }

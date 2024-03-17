@@ -71,7 +71,7 @@
           {{ product.title }}
         </td>
         <td class="border-b p-2">
-          {{ $filters.currencyUSD(product.price) }}
+          {{ $filters.currencyINR(product.price) }}
         </td>
         <td class="border-b p-2">
           {{ product.quantity }}
