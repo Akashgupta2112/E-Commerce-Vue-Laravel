@@ -88,6 +88,7 @@ export function createProduct({commit}, product) {
     product.images.forEach(im => form.append('images[]', im))
     form.append('description', product.description || '');
     form.append('published', product.published ? 1 : 0);
+    form.append('quantity', product.quantity || null);
     form.append('price', product.price);
     product = form;
   }

@@ -123,14 +123,6 @@ class ProductController extends Controller
         ProductCategory::insert($data);
     }
 
-    /**
-     *
-     *
-     * @param UploadedFile[] $images
-     * @return string
-     * @throws \Exception
-     * @author Zura Sekhniashvili <zurasekhniashvili@gmail.com>
-     */
     private function saveImages($images, $positions, Product $product)
     {
         foreach ($positions as $id => $position) {
@@ -145,7 +137,7 @@ class ProductController extends Controller
                 Storage::makeDirectory($path, 0755, true);
             }
             $name = Str::random().'.'.$image->getClientOriginalExtension();
-            if (!Storage::putFileAS('app/public/' . $path, $image, $name)) {
+            if (!Storage::putFileAS('public/' . $path, $image, $name)) {
                 throw new \Exception("Unable to save file \"{$image->getClientOriginalName()}\"");
             }
             $relativePath = $path . '/' . $name;
