@@ -5,7 +5,6 @@ namespace Barryvdh\Debugbar\Twig\Node;
 /**
  * Represents a stopwatch node. Based on Symfony\Bridge\Twig\Node\StopwatchNode
  *
- * @author Wouter J <wouter@wouterj.nl>
  */
 class StopwatchNode extends Node
 {

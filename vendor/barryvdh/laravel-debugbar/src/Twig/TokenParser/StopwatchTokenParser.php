@@ -7,7 +7,6 @@ use Barryvdh\Debugbar\Twig\Node\StopwatchNode;
 /**
  * Token Parser for the stopwatch tag. Based on Symfony\Bridge\Twig\TokenParser\StopwatchTokenParser;
  *
- * @author Wouter J <wouter@wouterj.nl>
  */
 class StopwatchTokenParser extends TokenParser
 {

@@ -17,7 +17,6 @@ if ('cli' !== \PHP_SAPI) {
 /**
  * Runs the Yaml lint command.
  *
- * @author Jan Schädlich <jan.schaedlich@sensiolabs.de>
  */
 
 use Symfony\Component\Console\Application;

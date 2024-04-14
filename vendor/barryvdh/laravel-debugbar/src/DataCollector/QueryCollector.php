@@ -220,9 +220,6 @@ class QueryCollector extends PDOCollector
      * Perform simple regex analysis on the code
      *
      * @package xplain (https://github.com/rap2hpoutre/mysql-xplain-xplain)
-     * @author e-doceo
-     * @copyright 2014
-     * @version $Id$
      * @access public
      * @param string $query
      * @return string[]

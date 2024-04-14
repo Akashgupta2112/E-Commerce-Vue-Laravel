@@ -30,8 +30,6 @@ use Symfony\Component\Yaml\Yaml;
 /**
  * Validates YAML files syntax and outputs encountered errors.
  *
- * @author Grégoire Pineau <lyrixx@lyrixx.info>
- * @author Robin Chalas <robin.chalas@gmail.com>
  */
 #[AsCommand(name: 'lint:yaml', description: 'Lint a YAML file and outputs encountered errors')]
 class LintCommand extends Command
