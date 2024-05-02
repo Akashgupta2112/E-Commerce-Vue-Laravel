@@ -189,4 +189,16 @@ trait HasSlug
 
         return substr($slugSourceString, 0, $this->slugOptions->maximumLength);
     }
+
+    public static function findBySlug(string $slug, array $columns = ['*'])
+    {
+        $modelInstance = new static();
+        $field = $modelInstance->getSlugOptions()->slugField;
+
+        $field = in_array(HasTranslatableSlug::class, class_uses_recursive(static::class))
+            ? "{$field}->{$modelInstance->getLocale()}"
+            : $field;
+
+        return static::where($field, $slug)->first($columns);
+    }
 }

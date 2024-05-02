@@ -41,9 +41,9 @@
                          @click="sortOrders('created_at')">
           Date
         </TableHeaderCell>
-        <TableHeaderCell field="actions">
+        <!-- <TableHeaderCell field="actions">
           Actions
-        </TableHeaderCell>
+        </TableHeaderCell> -->
       </tr>
       </thead>
       <tbody v-if="orders.loading || !orders.data.length">
@@ -71,7 +71,7 @@
         <td class="border-b p-2 max-w-[200px] whitespace-nowrap overflow-hidden text-ellipsis">
           {{ order.created_at }}
         </td>
-        <td class="border-b p-2 ">
+        <!-- <td class="border-b p-2 ">
           <router-link :to="{name: 'app.orders.view', params: {id: order.id}}"
                        class="w-8 h-8 rounded-full text-indigo-700 border border-indigo-700 flex justify-center items-center
                         hover:text-white hover:bg-indigo-700">
@@ -82,7 +82,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
           </router-link>
-        </td>
+        </td> -->
       </tr>
       </tbody>
     </table>

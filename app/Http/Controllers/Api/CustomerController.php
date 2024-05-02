@@ -25,14 +25,15 @@ class CustomerController extends Controller
      */
     public function index()
     {
+
         $perPage = request('per_page', 10);
         $search = request('search', '');
         $sortField = request('sort_field', 'updated_at');
         $sortDirection = request('sort_direction', 'desc');
-
         $query = Customer::query()
             ->with('user')
             ->orderBy("customers.$sortField", $sortDirection);
+
         if ($search) {
             $query
                 ->where(DB::raw("CONCAT(first_name, ' ', last_name)"), 'like', "%{$search}%")

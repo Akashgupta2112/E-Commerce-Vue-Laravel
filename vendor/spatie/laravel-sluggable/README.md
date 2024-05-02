@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-sluggable.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-sluggable)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/spatie/laravel-sluggable/run-tests?label=tests)](https://github.com/spatie/laravel-sluggable/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-sluggable/run-tests.yml)](https://github.com/spatie/laravel-sluggable/actions)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-sluggable.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-sluggable)
 
 This package provides a trait that will generate a unique slug when saving any Eloquent model.
@@ -408,6 +408,16 @@ class YourEloquentModel extends Model
     }
 }
 ```
+
+### Find models by slug
+
+For convenience, you can use the alias `findBySlug` to retrieve a model. The query will compare against the field passed to `saveSlugsTo` when defining the `SlugOptions`.
+
+```php
+$model = Article::findBySlug('my-article');
+```
+
+`findBySlug` also accepts a second parameter `$columns` just like the default Eloquent `find` method.
 
 
 ## Changelog

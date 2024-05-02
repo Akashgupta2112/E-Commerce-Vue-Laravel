@@ -20,7 +20,7 @@ trait Request
             $message = 'You must pass an array as the first argument to Stripe API '
                . 'method calls.  (HINT: an example call to create a charge '
                . "would be: \"Stripe\\Charge::create(['amount' => 100, "
-               . "'currency' => 'inr', 'source' => 'tok_1234'])\")";
+               . "'currency' => 'usd', 'source' => 'tok_1234'])\")";
 
             throw new \Stripe\Exception\InvalidArgumentException($message);
         }

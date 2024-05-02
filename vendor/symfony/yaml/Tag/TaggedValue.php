@@ -11,7 +11,10 @@
 
 namespace Symfony\Component\Yaml\Tag;
 
-
+/**
+ * @author Nicolas Grekas <p@tchwork.com>
+ * @author Guilhem N. <egetick@gmail.com>
+ */
 final class TaggedValue
 {
     private string $tag;
@@ -28,7 +31,7 @@ final class TaggedValue
         return $this->tag;
     }
 
-    public function getValue()
+    public function getValue(): mixed
     {
         return $this->value;
     }

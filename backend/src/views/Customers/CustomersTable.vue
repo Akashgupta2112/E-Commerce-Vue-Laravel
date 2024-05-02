@@ -31,10 +31,6 @@
                          @click="sortCustomers('name')">
           Name
         </TableHeaderCell>
-        <TableHeaderCell field="email" :sort-field="sortField" :sort-direction="sortDirection"
-                         @click="sortCustomers('email')">
-          Email
-        </TableHeaderCell>
         <TableHeaderCell field="phone" :sort-field="sortField" :sort-direction="sortDirection"
                          @click="sortCustomers('phone')">
           Phone
@@ -67,9 +63,6 @@
         <td class="border-b p-2 ">{{ customer.id }}</td>
         <td class="border-b p-2 ">
          {{ customer.first_name }} {{ customer.last_name }}
-        </td>
-        <td class="border-b p-2 max-w-[200px] whitespace-nowrap overflow-hidden text-ellipsis">
-          {{ customer.email }}
         </td>
         <td class="border-b p-2">
           {{ customer.phone }}
